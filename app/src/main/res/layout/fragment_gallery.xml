@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <WebView
-        android:id="@+id/webView"
+        android:id="@+id/webView_siakad"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

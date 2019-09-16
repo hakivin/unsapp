@@ -1,4 +1,4 @@
-package com.hakivin.unsapp.ui.slideshow
+package com.hakivin.unsapp.ui.sso
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -7,21 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.hakivin.unsapp.R
 
-class SlideshowFragment : Fragment() {
+class SSOFragment : Fragment() {
     @SuppressLint("SetJavaScriptEnabled")
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
-        val webView: WebView = root.findViewById(R.id.webView_siakad_old)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val root = inflater.inflate(R.layout.fragment_share, container, false)
+        val webView : WebView = root.findViewById(R.id.webView_sso)
         webView.settings.javaScriptEnabled = true
         webView.settings.builtInZoomControls = true
         webView.setOnKeyListener { v, keyCode, event ->
@@ -35,7 +28,7 @@ class SlideshowFragment : Fragment() {
                 return true
             }
         }
-        webView.loadUrl("https://siakad-old.uns.ac.id")
+        webView.loadUrl("https://sso.uns.ac.id")
         return root
     }
 }

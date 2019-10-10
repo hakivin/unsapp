@@ -28,7 +28,7 @@ class SSOFragment : Fragment() {
                 return true
             }
         }
-        webView.loadUrl("https://sso.uns.ac.id")
+        webView.loadUrl("https://sso.uns.ac.id/module.php/core/as_login.php?AuthId=default-sp&ReturnTo=https%3A%2F%2Fsso.uns.ac.id%2Fmodule.php%2Funs%2Findex.php")
         return root
     }
 }

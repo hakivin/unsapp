@@ -18,7 +18,7 @@ class HomeFragment : Fragment() {
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val webView: WebView = root.findViewById(R.id.webView_home)
+        val webView: WebView = root.findViewById(R.id.webview_home)
         webView.settings.javaScriptEnabled = true
         webView.settings.builtInZoomControls = true
         webView.setOnKeyListener { v, keyCode, event ->
